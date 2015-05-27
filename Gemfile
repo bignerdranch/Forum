@@ -38,6 +38,7 @@ gem 'devise', '~> 3.4.1'
 group :development do
   # Error Handling
   gem 'better_errors'
+  gem 'pry'
 end
 
 group :development, :test do
