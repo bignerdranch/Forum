@@ -36,6 +36,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    addressable (2.3.8)
     arel (6.0.0)
     bcrypt (3.1.10)
     better_errors (2.1.1)
@@ -53,6 +54,9 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
+    capybara-email (2.4.0)
+      capybara (~> 2.4)
+      mail
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -84,6 +88,8 @@ GEM
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
     json (1.8.2)
+    launchy (2.4.3)
+      addressable (~> 2.3)
     loofah (2.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -188,10 +194,12 @@ DEPENDENCIES
   better_errors
   byebug
   capybara (~> 2.4.4)
+  capybara-email
   coffee-rails (~> 4.1.0)
   devise (~> 3.4.1)
   jbuilder (~> 2.0)
   jquery-rails
+  launchy
   pg
   rails (= 4.2.1)
   rspec-rails (~> 3.0)
