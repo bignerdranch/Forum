@@ -60,3 +60,9 @@ group :test do
   gem 'capybara', '~> 2.4.4'
   gem 'capybara-email'
 end
+
+#Heroku deploy
+group :production do
+  gem 'rails_12factor'
+end
+
