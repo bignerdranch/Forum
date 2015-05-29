@@ -15,7 +15,6 @@ RSpec.feature 'User signs up for page' do
     fill_in 'Email', :with => 'raven@bignerdranch.com'
     fill_in 'Password', :with => 'password'
     click_on('Log in')
-    expect(page).to have_content('Big Nerd Ranch Forum')
     expect(page).to have_link('Logout')
   end
 end
