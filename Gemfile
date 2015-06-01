@@ -51,9 +51,12 @@ group :development, :test do
   gem 'spring'
 
   #Rspec
-  gem 'rspec-rails', '~> 3.0' 
+  gem 'rspec-rails', '~> 3.0'
+
+  gem 'launchy'
 end
 
 group :test do
   gem 'capybara', '~> 2.4.4'
+  gem 'capybara-email'
 end
