@@ -51,7 +51,9 @@ group :development, :test do
   gem 'spring'
 
   #Rspec
-  gem 'rspec-rails', '~> 3.0' 
+  gem 'rspec-rails', '~> 3.0'
+
+  gem 'launchy'
 end
 
 group :test do
