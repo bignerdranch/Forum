@@ -59,7 +59,6 @@ end
 group :test do
   gem 'capybara', '~> 2.4.4'
   gem 'capybara-email'
-<<<<<<< HEAD
 end
 
 #Heroku deploy
