@@ -27,6 +27,26 @@
     <%= f.password_field :current_password, autocomplete: "off" %>
   </div>
 
+  <div class="field">
+    <%= f.label :github_account %><br />
+    <%= f.text_field :github_account %>
+  </div>
+
+  <div class="field">
+    <%= f.label :twitter_account %><br />
+    <%= f.text_field :twitter_account %>
+  </div>
+
+  <div class="field">
+    <%= f.label :bio %><br />
+    <%= f.text_field :bio %>
+  </div>
+
+  <div class="field">
+    <%= f.label :position %><br />
+    <%= f.text_field :position %>
+  </div>
+
   <div class="actions">
     <%= f.submit "Update" %>
   </div>
