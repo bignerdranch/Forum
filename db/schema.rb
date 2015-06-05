@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20150611143524) do
 
   create_table "forum_topics", force: :cascade do |t|
     t.string  "title"
-    t.boolean "archived"
+    t.boolean "archived", default: false
   end
 
   create_table "users", force: :cascade do |t|
