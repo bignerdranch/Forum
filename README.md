@@ -15,11 +15,9 @@ Create a collaborative environment for readers of Big Nerd Ranch books.
 
 Clone the repo:
 
-* Go to the the Github page for your BNR Forum [repo]("https://www.github.com/bignerdranch/Forum).
-* Click the clipboard icon on the right side of the page in order to get the SSH url of the repo.
-* In your terminal, type
-  `$ git clone` & paste SSH url
+* In your terminal, type `$ git clone git@github.com:bignerdranch/Forum.git`
 * Press enter
+* In your terminal, type `$ cd Forum`
 
 
 Install gems:
