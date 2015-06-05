@@ -13,19 +13,12 @@ Create a collaborative environment for readers of Big Nerd Ranch books.
 
 ##Bootstrap
 
-Fork the repo:
+Clone the repo:
 
-* Visit the [BNR Forum](https://github.com/bignerdranch/forum) page
-* Fork the repo by clicking the fork button in the top right hand corner of the page.
-
-Clone your fork:
-
-* Go to the the Github page for your BNR Forum fork. The URL should read as follows:
-`https://www.github.com/YOUR-GITHUB-USERNAME/Forum`
-* Click the clipboard icon on the right side of the page in order to get the SSH url of the repo.
-* In your terminal, type
-  `$ git clone` & paste SSH url
+* In your terminal, type `$ git clone git@github.com:bignerdranch/Forum.git`
 * Press enter
+* In your terminal, type `$ cd Forum`
+
 
 Install gems:
 
