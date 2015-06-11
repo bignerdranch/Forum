@@ -12,12 +12,22 @@ class ForumTopicsController < ApplicationController
     if @forum_topic.save
       redirect_to @forum_topic
     else
-     flash[:notice] = "Oops forum topic wasn't created."
+     flash[:alert] = "Oops forum topic wasn't created."
     end
   end
 
   def show
     @forum_topic = ForumTopic.find(params[:id])
+  end
+
+  def update
+    @forum_topic = ForumTopic.find(params[:id])
+    if @forum_topic.update(forum_topic_params)
+      flash[:notice] = "This Forum Topic has been updated"
+    else
+      flash[:alert] = "There was an error updating this Forum Topic"
+    end
+    redirect_to @forum_topic
   end
 
   private
