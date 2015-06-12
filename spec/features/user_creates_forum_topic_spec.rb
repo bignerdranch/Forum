@@ -12,5 +12,5 @@ RSpec.feature 'User creates forum topic' do
     fill_in 'Title', with: 'BNR iOS book'
     click_on('Create Forum topic')
     expect(page).to have_content("You're at the Forum Topic Page")
-    end
   end
+end
