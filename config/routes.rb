@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-
   devise_for :users
-  resources :forum_topics
+  resources :forum_topics do
+    resources :posts
+  end
 
   root to: 'forum_topics#index'
 

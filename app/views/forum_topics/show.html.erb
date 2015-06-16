@@ -8,4 +8,5 @@
 <% else %>
   <%= button_to "Archive", forum_topic_path(@forum_topic), { method: :patch,
   params: { "forum_topic[archived]" =>  true } } %>
+  <%= button_to "Create a new post", new_forum_topic_posts_path(@post) %>
 <% end %>

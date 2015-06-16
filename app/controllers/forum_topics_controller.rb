@@ -1,14 +1,17 @@
 class ForumTopicsController < ApplicationController
+  before_filter :authenticate_user!
 
   def index
     @forum_topics = ForumTopic.all
   end
+
   def new
     @forum_topic =  ForumTopic.new
   end
 
   def create
     @forum_topic =  ForumTopic.new(forum_topic_params)
+    @forum_topic = current_user.forum_topics.new(forum_topic_params)
     if @forum_topic.save
       flash[:notice] = "Forum Topic was successfully created."
       redirect_to @forum_topic
@@ -20,6 +23,8 @@ class ForumTopicsController < ApplicationController
 
   def show
     @forum_topic = ForumTopic.find(params[:id])
+    @post = Post.new
+    @posts = @forum_topic.posts
   end
 
   def update
@@ -35,6 +40,6 @@ class ForumTopicsController < ApplicationController
   private
 
   def forum_topic_params
-    params.require(:forum_topic).permit(:title, :archived)
+    params.require(:forum_topic).permit(:title, :archived, :user_id)
   end
 end
