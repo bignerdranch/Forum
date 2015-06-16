@@ -5,7 +5,7 @@
     <li><%= link_to "Profile", edit_user_registration_path %></li>
     <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %>
     <li><%= link_to "Create New Forum Topic", new_forum_topic_path %>
-    <li><%= link_to "View All Forum Topics", forum_topics_path %>
+    <li><%= link_to "View All Forum Topics", forum_topics_path %><br />
   <% else %>
     <li><%= link_to "Sign in", new_user_session_path %></li>
   <% end %>

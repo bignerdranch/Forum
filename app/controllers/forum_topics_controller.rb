@@ -23,8 +23,7 @@ class ForumTopicsController < ApplicationController
 
   def show
     @forum_topic = ForumTopic.find(params[:id])
-    @post = Post.new
-    @posts = @forum_topic.posts
+    @post = ForumTopic.find(params[:id])
   end
 
   def update
