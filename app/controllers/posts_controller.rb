@@ -17,21 +17,16 @@ class PostsController < ApplicationController
   end
 
   def show
-    @forum_topic = ForumTopic.find(params[:forum_topic_id])
     @post = @forum_topic.posts.find(params[:id])
   end
 
-  def index
-    @posts = ForumTopic.post.find(params[:forum_topic_id])
-  end
+  private
 
   def find_forum_topic
     @forum_topic = ForumTopic.find(params[:forum_topic_id])
   end
 
-  private
-
   def post_params
-    params.require(:post).permit(:content, :forum_topic_id, :user_id)
+    params.require(:post).permit(:content, :forum_topic_id)
   end
 end

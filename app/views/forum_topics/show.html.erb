@@ -1,7 +1,7 @@
 <h1>You're at the Forum Topic Page </h1>
 <h1><%= @forum_topic.title %></h1>
 <% @forum_topic.posts.each do |post| %><br />
-  <%= @post.user.username %>:
+  <%= @forum_topic.user.username %>:
   <%= post.content %>
   <% end %>
 <% if @forum_topic.archived? %>
