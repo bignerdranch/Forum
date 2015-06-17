@@ -13,6 +13,7 @@ class PostsController < ApplicationController
       redirect_to forum_topic_post_path(id: @post.id)
     else
       flash[:alert] = "Oops. Post wasn't created."
+      redirect_to @forum_topic
     end
   end
 
