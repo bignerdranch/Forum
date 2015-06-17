@@ -10,9 +10,11 @@ class ForumTopicsController < ApplicationController
   def create
     @forum_topic =  ForumTopic.new(forum_topic_params)
     if @forum_topic.save
+      flash[:notice] = "Forum Topic was successfully created."
       redirect_to @forum_topic
     else
-     flash[:alert] = "Oops forum topic wasn't created."
+      flash[:alert] = "Oops forum topic wasn't created."
+      redirect_to @forum_topic
     end
   end
 
