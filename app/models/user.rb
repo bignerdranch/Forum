@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
 
   validates :username, presence: true, uniqueness: { case_sensitive: false }
 
+  has_many :forum_topics
+  has_many :posts
+
   attr_accessor :login
 
   def self.find_for_database_authentication(warden_conditions)

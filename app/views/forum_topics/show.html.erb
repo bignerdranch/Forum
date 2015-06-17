@@ -1,11 +1,14 @@
 <h1>You're at the Forum Topic Page </h1>
 <h1><%= @forum_topic.title %></h1>
-
-
+<% @forum_topic.posts.each do |post| %><br />
+  <%= @forum_topic.user.username %>:
+  <%= post.content %>
+  <% end %>
 <% if @forum_topic.archived? %>
   <%= button_to "Un-Archive", forum_topic_path(@forum_topic), { method: :patch,
   params: { "forum_topic[archived]" => false } } %>
 <% else %>
   <%= button_to "Archive", forum_topic_path(@forum_topic), { method: :patch,
   params: { "forum_topic[archived]" =>  true } } %>
+  <%= button_to "Create a new post", new_forum_topic_post_path(@forum_topic), method: :get %>
 <% end %>

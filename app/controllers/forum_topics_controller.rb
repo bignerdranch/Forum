@@ -1,14 +1,17 @@
 class ForumTopicsController < ApplicationController
+  before_filter :authenticate_user!
 
   def index
     @forum_topics = ForumTopic.all
   end
+
   def new
     @forum_topic =  ForumTopic.new
   end
 
   def create
     @forum_topic =  ForumTopic.new(forum_topic_params)
+    @forum_topic = current_user.forum_topics.new(forum_topic_params)
     if @forum_topic.save
       flash[:notice] = "Forum Topic was successfully created."
       redirect_to @forum_topic

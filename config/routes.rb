@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-
   devise_for :users
-  root to: 'users#show'
+  resources :forum_topics do
+    resources :posts
+  end
 
-  resources :forum_topics
+  root to: 'forum_topics#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

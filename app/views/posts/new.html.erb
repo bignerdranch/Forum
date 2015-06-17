@@ -1,0 +1,7 @@
+<%= @forum_topic.title %>
+<%= form_for ([@forum_topic, @post]) do |f| %><br />
+  <%= f.label :content %>
+  <%= f.text_area :content %><br />
+
+  <%= f.submit "Submit" %>
+<% end %>

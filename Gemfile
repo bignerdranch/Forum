@@ -52,7 +52,8 @@ group :development, :test do
 
   #Rspec
   gem 'rspec-rails', '~> 3.0'
-
+  # Tests associations
+  gem 'shoulda-matchers', '~> 2.8.0'
   gem 'launchy'
 end
 
