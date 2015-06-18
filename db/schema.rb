@@ -19,6 +19,15 @@ ActiveRecord::Schema.define(version: 20150617211145) do
   create_table "forum_topics", force: :cascade do |t|
     t.string  "title"
     t.boolean "archived", default: false
+    t.integer "user_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "forum_topic_id", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.integer  "user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,6 +51,7 @@ ActiveRecord::Schema.define(version: 20150617211145) do
     t.string   "twitter_account"
     t.text     "bio"
     t.string   "position"
+    t.string   "username",                            null: false
     t.string   "avatar"
   end
 
