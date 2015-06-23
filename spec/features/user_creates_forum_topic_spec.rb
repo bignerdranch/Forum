@@ -24,4 +24,11 @@ RSpec.feature "User creates forum topic" do
     click_on("Archive")
     expect(page).to have_selector(:link_or_button, "Un-Archive")
   end
+
+  scenario 'user enters blank title' do
+    click_on('Create New Forum Topic')
+    fill_in 'Title', with: ''
+    click_on('Create Forum topic')
+    expect(page).to have_content("Title can't be blank")
+  end
 end
