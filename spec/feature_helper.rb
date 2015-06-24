@@ -5,3 +5,9 @@ def log_in_with(email, password)
   fill_in 'user_password', with: password
   click_button('Log in')
 end
+
+def create_new_forum_topic(title)
+  click_on('Create New Forum Topic')
+  fill_in 'Title', with: title
+  click_on('Create Forum topic')
+end
