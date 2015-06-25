@@ -20,7 +20,7 @@ class ForumTopicsController < ApplicationController
   end
 
   def show
-    @forum_topic = ForumTopic.find(params[:id])
+    @forum_topic = ForumTopic.find(params[:id]).decorate
   end
 
   def update

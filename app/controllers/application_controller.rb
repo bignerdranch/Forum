@@ -38,6 +38,7 @@ class ApplicationController < ActionController::Base
           :twitter_account,
           :bio,
           :position,
+          :avatar,
           )
       }
     end
