@@ -1,7 +1,7 @@
 <h1>You're at the Forum Topic Page </h1>
 <h1><%= @forum_topic.title %></h1>
 <% @forum_topic.posts.each do |post| %><br />
-  <%= image_tag post.user.gravatar_url %>
+  <%= post.user.thumbnail %>
   <%= post.user.username %>:
   <%= post.content %>
   <% end %>
