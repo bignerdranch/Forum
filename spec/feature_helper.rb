@@ -9,5 +9,5 @@ end
 def create_new_forum_topic(title)
   click_on('Create New Forum Topic')
   fill_in 'Title', with: title
-  click_on('Create Forum topic')
+  click_button('Create Forum topic')
 end
