@@ -8,6 +8,6 @@ class UserDecorator < Draper::Decorator
   private
 
   def avatar_url
-    object.avatar || object.gravatar_url
+    object.avatar_url || object.gravatar_url
   end
 end
