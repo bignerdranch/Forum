@@ -35,6 +35,10 @@ gem 'carrierwave', '~> 0.10.0'
 #Decorator
 gem 'draper', '~> 1.3'
 
+#Markdown Text Editor
+gem 'redcarpet', '~> 3.1.2'
+gem 'pygments.rb'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
