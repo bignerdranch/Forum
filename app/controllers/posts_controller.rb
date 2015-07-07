@@ -17,7 +17,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = @forum_topic.posts.find(params[:id])
+    @post = @forum_topic.posts.find(params[:id]).decorate
   end
 
   private

@@ -3,7 +3,7 @@
 <% @forum_topic.posts.each do |post| %><br />
   <%= post.user.thumbnail %>
   <%= post.user.username %>:
-  <%= post.content %>
+  <%= post.formatted_content %>
   <% end %>
 <% if @forum_topic.archived? %>
   <%= button_to "Un-Archive", forum_topic_path(@forum_topic), { method: :patch,
