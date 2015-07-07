@@ -23,4 +23,11 @@ RSpec.feature 'User can post to forum topic' do
     click_button('Submit')
     expect(page).to have_content("Content can't be blank")
   end
+
+  scenario 'user can see markdown in his post' do
+    click_button('Create a new post')
+    fill_in 'Content', with: '**hello**'
+    click_button('Submit')
+    expect(page.html).to include('<p><strong>hello</strong></p>')
+  end
 end
