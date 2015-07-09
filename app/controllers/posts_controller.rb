@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!
 
   def new
-    @post = Post.new
+    @post = Post.new.decorate
   end
 
   def create
@@ -27,6 +27,6 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:content, :forum_topic_id)
+    params.require(:post).permit(:content, :forum_topic_id, :post_image)
   end
 end

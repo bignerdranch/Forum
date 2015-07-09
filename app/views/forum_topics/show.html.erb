@@ -4,6 +4,7 @@
   <%= post.user.thumbnail %>
   <%= post.user.username %>:
   <%= post.formatted_content %>
+  <%= post.accompanying_image %>
   <% end %>
 <% if @forum_topic.archived? %>
   <%= button_to "Un-Archive", forum_topic_path(@forum_topic), { method: :patch,
