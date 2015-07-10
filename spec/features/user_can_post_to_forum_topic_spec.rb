@@ -30,4 +30,13 @@ RSpec.feature 'User can post to forum topic' do
     click_button('Submit')
     expect(page.html).to include('<p><strong>hello</strong></p>')
   end
+
+  scenario 'user can preview post before submitting it' do
+    click_button('Create a new post')
+    fill_in 'Content', with: '**hello**'
+    click_button('Preview')
+    expect(page.html).to include('<p><strong>hello</strong></p>')
+    click_button('Submit')
+    expect(page).to have_content('BNR iOS book')
+  end
 end

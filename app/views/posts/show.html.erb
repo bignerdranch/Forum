@@ -1,4 +1,6 @@
 <h1><%= @forum_topic.title %></h1>
-
-<%= @post.formatted_content %>
-<%= @post.accompanying_image %>
+<%= form_for ([@forum_topic, @post]) do |f| %><br />
+  <%= @post.formatted_content %>
+  <%= @post.accompanying_image %>
+<% end %>
+  <%= link_to "Back to Forum Topic", forum_topic_path(@forum_topic.id) %>
