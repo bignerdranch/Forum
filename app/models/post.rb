@@ -3,4 +3,6 @@ class Post < ActiveRecord::Base
 
   belongs_to :forum_topics
   belongs_to :user
+
+  mount_uploader :post_image, PostImageUploader
 end
