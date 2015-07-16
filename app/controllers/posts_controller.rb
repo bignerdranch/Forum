@@ -7,12 +7,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = @forum_topic.posts.new(post_params)
+    @post = @forum_topic.posts.new(post_params).decorate
     @post.user = current_user
-    if @post.save
-      redirect_to forum_topic_post_path(id: @post.id)
-    else
+    if previewed? || !@post.save
       render "new"
+    else
+      flash[:notice] = "Post successfully created"
+      redirect_to forum_topic_path(@forum_topic.id)
     end
   end
 
@@ -27,6 +28,10 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:content, :forum_topic_id, :post_image)
+    params.require(:post).permit(:content, :forum_topic_id, :post_image, :commit)
+  end
+
+  def previewed?
+    params[:preview_button]
   end
 end
