@@ -35,8 +35,8 @@ RSpec.feature 'User can post to forum topic' do
     click_button('Create a new post')
     fill_in 'Content', with: '**hello**'
     click_button('Preview')
-    expect(page.html).to include('<p><strong>hello</strong></p>')
+    expect(page.html).to include('<strong>hello</strong>')
     click_button('Submit')
-    expect(page).to have_content('BNR iOS book')
+    expect(page).to have_content('Post successfully created')
   end
 end

@@ -13,6 +13,7 @@ class PostsController < ApplicationController
       render "new"
     else
       @post.save
+      flash[:notice] = "Post successfully created"
       redirect_to forum_topic_path(@forum_topic.id)
     end
   end
