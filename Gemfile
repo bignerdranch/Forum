@@ -45,6 +45,10 @@ gem 'fog', '~> 1.32.0'
 #Private
 gem 'figaro', '~> 1.1.1'
 
+# Search functionality
+gem 'sunspot_rails', '~> 2.2.0'
+gem 'sunspot_solr', '~> 2.2.0'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
