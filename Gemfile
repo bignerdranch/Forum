@@ -39,6 +39,12 @@ gem 'draper', '~> 1.3'
 gem 'redcarpet', '~> 3.1.2'
 gem 'pygments.rb'
 
+#AWS file storage
+gem 'aws-sdk', '~> 2.1.7'
+gem 'fog', '~> 1.32.0'
+#Private
+gem 'figaro', '~> 1.1.1'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
