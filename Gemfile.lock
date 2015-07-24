@@ -311,6 +311,7 @@ GEM
     sunspot (2.2.0)
       pr_geohash (~> 1.0)
       rsolr (~> 1.0.7)
+    sunspot_matchers (2.2.0.1)
     sunspot_rails (2.2.0)
       nokogiri
       rails (>= 3)
@@ -366,6 +367,7 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   shoulda-matchers (~> 2.8.0)
   spring
+  sunspot_matchers (~> 2.2.0.1)
   sunspot_rails (~> 2.2.0)
   sunspot_solr (~> 2.2.0)
   turbolinks

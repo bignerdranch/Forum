@@ -83,6 +83,9 @@ end
 group :test do
   gem 'capybara', '~> 2.4.4'
   gem 'capybara-email'
+
+  #Search Matchers
+  gem 'sunspot_matchers', '~> 2.2.0.1'
 end
 
 #Heroku deploy
