@@ -1,11 +1,16 @@
 <h2>Big Nerd Ranch Forum</h2>
-<li><%= link_to "Home", new_user_session_path %></li>
+<ul><li><%= link_to "Home", new_user_session_path %></li>
 
   <% if user_signed_in? %>
     <li><%= link_to "Profile", edit_user_registration_path %></li>
-    <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %>
-    <li><%= link_to "Create New Forum Topic", new_forum_topic_path %>
-    <li><%= link_to "View All Forum Topics", forum_topics_path %><br />
+    <li><%= link_to "Logout", destroy_user_session_path, :method => :delete %></li>
+    <li><%= link_to "Create New Forum Topic", new_forum_topic_path %></li>
+    <li><%= link_to "View All Forum Topics", forum_topics_path %></li>
+    <li><%= form_tag posts_searches_path, :method => :get do %>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %></li>
+<% end %>
   <% else %>
     <li><%= link_to "Sign in", new_user_session_path %></li>
   <% end %>
+</ul>

@@ -1,0 +1,4 @@
+<% @posts.each do |post| %>
+  <p><%= link_to post.title, forum_topic_post_path(post.forum_topic,post) %></p>
+      <p><%= post.username %>: <%= post.content %></p>
+<% end %>
