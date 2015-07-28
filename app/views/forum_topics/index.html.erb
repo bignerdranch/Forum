@@ -1,4 +1,4 @@
-<h1>Forum Topics Index</h1>
+<h5>Forum Topics Index</h5>
 
   <% @forum_topics.each do |forum_topic| %><br />
   <%= link_to forum_topic.title, forum_topic_path(forum_topic.id) %>
