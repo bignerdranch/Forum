@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     resources :posts
   end
 
+  resources :posts_searches, only:[:index]
+
   root to: 'forum_topics#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
